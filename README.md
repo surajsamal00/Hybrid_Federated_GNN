@@ -10,13 +10,13 @@ This implementation combines **XGBoost** (tabular learning) with **GraphSAGE** (
 Customer Data (57 features + 1 density)
          |
          ├─────────────────┬─────────────────┐
-         |                 |                 |
-    [XGBoost]         [GraphSAGE]            |
-    (LOCAL)           (FEDERATED)            |
-         |                 |                 |
-    Risk Score        Graph Embedding        |
-    (1 value)         (128-dim)              |
-         |                 |                 |
+         |                                   |
+    [XGBoost]                           [GraphSAGE]            
+    (LOCAL)                             (FEDERATED)            
+         |                                   |
+    Risk Score                          Graph Embedding       
+    (1 value)                             (128-dim)              
+         |                                   |
          └─────────────────┴─────────────────┘
                            |
                     [Fusion Layer]

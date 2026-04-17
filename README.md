@@ -153,10 +153,10 @@ To understand component contributions:
 # Check metrics.json -> global_xgb_auc
 
 # 2. GraphSAGE-only (use original simulate.py)
-python simulate.py --csv data.csv --num_banks 4 --rounds 30
+python simulate.py --csv data.csv --num_banks 4 --rounds 40
 
 # 3. Hybrid (this script)
-python hybrid_simulate.py --csv data.csv --num_banks 4 --rounds 30
+python hybrid_simulate.py --csv data.csv --num_banks 4 --rounds 40
 ```
 
 Compare final AUCs:
@@ -173,7 +173,7 @@ Compare final AUCs:
 3. GraphSAGE + Fusion initialized randomly
 4. Evaluate: Get baseline XGB-only AUC
 
-**Rounds 1-30 (Federation):**
+**Rounds 1-40 (Federation):**
 1. Broadcast global GraphSAGE + Fusion weights
 2. Each bank:
    - Forward pass: GraphSAGE embedding + frozen XGBoost scores
@@ -234,4 +234,4 @@ All leakage fixes from original `client.py` are preserved:
 - `hybrid_simulate.py` — Main training script
 - `server.py` — FedAdam aggregation
 - `stream.py` — Streaming data 
-- `loan_cleaned.csv` — Customer data (to be downloaded from lending club website)
+- `lending_club.csv` — Customer data (to be downloaded from lending club website)

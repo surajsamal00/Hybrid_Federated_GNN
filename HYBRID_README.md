@@ -14,15 +14,15 @@ Customer Data (57 features + 1 density)
     [XGBoost]         [GraphSAGE]            |
     (LOCAL)           (FEDERATED)            |
          |                 |                 |
-    Risk Score        Graph Embedding       |
-    (1 value)         (128-dim)             |
+    Risk Score        Graph Embedding        |
+    (1 value)         (128-dim)              |
          |                 |                 |
          └─────────────────┴─────────────────┘
-                          |
-                  [Fusion Layer]
-                   (FEDERATED)
-                          |
-                  Final Prediction
+                           |
+                    [Fusion Layer]
+                     (FEDERATED)
+                           |
+                    Final Prediction
 ```
 
 ### Key Components
@@ -48,19 +48,19 @@ Customer Data (57 features + 1 density)
 
 | Component | Shared Across Banks | Training |
 |-----------|---------------------|----------|
-| **XGBoost models** | ❌ No (privacy preserved) | Once, frozen |
+| **XGBoost models** | No (privacy is preserved) | Once, frozen |
 | **GraphSAGE parameters** | ✅ Yes (via FedProx + FedAdam) | Every round |
 | **Fusion layer** | ✅ Yes (via FedProx + FedAdam) | Every round |
 
 ## 🔧 Usage
 
-### Basic Run (4 banks, 30 rounds)
+### Basic Run (4 banks, 40 rounds)
 
 ```bash
 python hybrid_simulate.py \
   --csv /path/to/lending_club.csv \
   --num_banks 4 \
-  --rounds 30 \
+  --rounds 40 \
   --hidden_dim 128 \
   --emb_dim 128 \
   --mu 0.01 \
@@ -73,8 +73,8 @@ python hybrid_simulate.py \
 python hybrid_simulate.py \
   --csv /path/to/lending_club.csv \
   --num_banks 4 \
-  --rounds 30 \
-  --local_epochs 1 \
+  --rounds 40 \
+  --local_epochs 10 \
   --mu 0.01 \
   --batch_size 75 \
   --stream_frac 0.15 \
@@ -200,13 +200,11 @@ All leakage fixes from original `client.py` are preserved:
 - GraphSAGE + Fusion parameters aggregated via FedProx + FedAdam
 - Each bank maintains its own credit policy (XGB) while benefiting from cross-bank graph structure (SAGE)
 
-## 📝 Thesis Narrative
-
-**Recommended framing:**
+## 📝 Model Overview
 
 > "We propose a hybrid federated learning approach combining XGBoost for individual risk assessment with GraphSAGE for network contagion detection. Local XGBoost models capture bank-specific credit policies and remain private, while federated GraphSAGE leverages cross-bank customer similarity graphs to propagate default risk signals. Our fusion layer learns to optimally combine individual and network risk, achieving [X]% improvement over single-model baselines while preserving data privacy across 4 simulated financial institutions."
 
-**Key thesis contributions:**
+**Key Factors:**
 1. **Privacy-preserving hybrid architecture** — XGB local, SAGE federated
 2. **Complementary risk signals** — Individual (XGB) + Contagion (SAGE)
 3. **Empirical validation** — Show Hybrid > XGB-only and Hybrid > SAGE-only
@@ -234,13 +232,6 @@ All leakage fixes from original `client.py` are preserved:
 
 - `hybrid_client.py` — HybridFederatedClient class
 - `hybrid_simulate.py` — Main training script
-- `server.py` — FedAdam aggregation (unchanged)
-- `stream.py` — Streaming data (unchanged)
-
-## 🚀 Next Steps
-
-1. **Run baseline**: Get XGBoost-only and GraphSAGE-only results
-2. **Run hybrid**: `python hybrid_simulate.py ...`
-3. **Compare**: Check if Hybrid > both baselines
-4. **Tune**: If needed, adjust fusion layer architecture or XGB params
-5. **Write thesis**: Use ablation results to show contribution of each component
+- `server.py` — FedAdam aggregation
+- `stream.py` — Streaming data 
+- `loan_cleaned.csv` — Customer data (to be downloaded from lending club website)

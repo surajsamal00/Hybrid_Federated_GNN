@@ -1,0 +1,1495 @@
+Loading data …
+Total rows: 1652452 | Positives: 211158
+Bank 0: 63750 rows
+Bank 1: 63750 rows
+Bank 2: 63750 rows
+Bank 3: 63750 rows
+Stream: 45000 rows
+Using device: cuda
+
+============================================================
+Initializing HYBRID clients (XGBoost + GraphSAGE) …
+============================================================
+
+[Bank 0] Feature dim: 58 (41 base + 16 engineered = 57; +1 density = 58 total)
+Avg degree: 69.81229803921569
+Normal-> 5-20
+[Bank 0] Avg neighbors/node: 69.8  ✓
+Avg degree: 69.81427450980392
+Normal-> 5-20
+[Bank 0] Training local XGBoost...
+[Bank 0] XGBoost train AUC: 0.8624
+[Bank 0] SAGE LR=0.00200, Fusion LR=0.00050
+[Bank 1] Feature dim: 58 (41 base + 16 engineered = 57; +1 density = 58 total)
+Avg degree: 69.82663529411765
+Normal-> 5-20
+[Bank 1] Avg neighbors/node: 69.8  ✓
+Avg degree: 69.82883137254902
+Normal-> 5-20
+[Bank 1] Training local XGBoost...
+[Bank 1] XGBoost train AUC: 0.8595
+[Bank 1] SAGE LR=0.00200, Fusion LR=0.00050
+[Bank 2] Feature dim: 58 (41 base + 16 engineered = 57; +1 density = 58 total)
+Avg degree: 69.83225098039216
+Normal-> 5-20
+[Bank 2] Avg neighbors/node: 69.8  ✓
+Avg degree: 69.83516862745098
+Normal-> 5-20
+[Bank 2] Training local XGBoost...
+[Bank 2] XGBoost train AUC: 0.8617
+[Bank 2] SAGE LR=0.00200, Fusion LR=0.00050
+[Bank 3] Feature dim: 58 (41 base + 16 engineered = 57; +1 density = 58 total)
+Avg degree: 69.81157647058824
+Normal-> 5-20
+[Bank 3] Avg neighbors/node: 69.8  ✓
+Avg degree: 69.81433725490196
+Normal-> 5-20
+[Bank 3] Training local XGBoost...
+[Bank 3] XGBoost train AUC: 0.8633
+[Bank 3] SAGE LR=0.00200, Fusion LR=0.00050
+
+============================================================
+XGBoost models trained (local, frozen)
+GraphSAGE + Fusion will be federated
+============================================================
+
+
+============================================================
+Round 0 (Before Federation)
+============================================================
+Bank 0: Hybrid AUC=0.6344, AP=0.1970 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.6037, AP=0.1837 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.6399, AP=0.2086 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.6216, AP=0.1933 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.6249, AP=0.1956 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -12.34%
+
+============================================================
+Round 1/30
+============================================================
+Avg degree: 69.8127311477465
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.8127311477465
+Normal-> 5-20
+Avg degree: 69.81470569798783
+Normal-> 5-20
+[Bank 0] +62 customers | Total: 63812 | Train: 50000 | Avg default prob: 0.4593
+Avg degree: 69.82697823122855
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.82697823122855
+Normal-> 5-20
+Avg degree: 69.82917234786152
+Normal-> 5-20
+[Bank 1] +57 customers | Total: 63807 | Train: 50000 | Avg default prob: 0.4587
+Avg degree: 69.8325550785045
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.8325550785045
+Normal-> 5-20
+Avg degree: 69.83546961672255
+Normal-> 5-20
+[Bank 2] +68 customers | Total: 63818 | Train: 50000 | Avg default prob: 0.4601
+Avg degree: 69.81212491577743
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81212491577743
+Normal-> 5-20
+Avg degree: 69.81491405380842
+Normal-> 5-20
+[Bank 3] +69 customers | Total: 63819 | Train: 50000 | Avg default prob: 0.4610
+Bank 0 loss: 1.1064
+Bank 1 loss: 1.1168
+Bank 2 loss: 1.1093
+Bank 3 loss: 1.1144
+Bank 0: Hybrid AUC=0.6697, AP=0.2194 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.6456, AP=0.2089 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.6758, AP=0.2289 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.6596, AP=0.2156 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.6627, AP=0.2182 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -8.57%
+
+============================================================
+Round 2/30
+============================================================
+Avg degree: 69.81263698415681
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81263698415681
+Normal-> 5-20
+Avg degree: 4.1875
+Normal-> 5-20
+[Bank 0] +64 customers | Total: 63876 | Train: 50000 | Avg default prob: 0.4648
+Avg degree: 69.82743501409333
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.82743501409333
+Normal-> 5-20
+Avg degree: 4.679245283018868
+Normal-> 5-20
+[Bank 1] +53 customers | Total: 63860 | Train: 50000 | Avg default prob: 0.4624
+Avg degree: 69.83282974559687
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.83282974559687
+Normal-> 5-20
+Avg degree: 6.385964912280702
+Normal-> 5-20
+[Bank 2] +57 customers | Total: 63875 | Train: 50000 | Avg default prob: 0.4639
+Avg degree: 69.81277288305347
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81277288305347
+Normal-> 5-20
+Avg degree: 8.439024390243903
+Normal-> 5-20
+[Bank 3] +82 customers | Total: 63901 | Train: 50000 | Avg default prob: 0.4643
+Bank 0 loss: 1.0924
+Bank 1 loss: 1.0996
+Bank 2 loss: 1.0948
+Bank 3 loss: 1.0956
+Bank 0: Hybrid AUC=0.6945, AP=0.2376 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.6763, AP=0.2315 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.6991, AP=0.2419 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.6869, AP=0.2325 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.6892, AP=0.2359 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -5.91%
+
+============================================================
+Round 3/30
+============================================================
+Avg degree: 69.81315982920688
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81315982920688
+Normal-> 5-20
+Avg degree: 4.655737704918033
+Normal-> 5-20
+[Bank 0] +61 customers | Total: 63937 | Train: 50000 | Avg default prob: 0.4654
+Avg degree: 69.82769731285389
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.82769731285389
+Normal-> 5-20
+Avg degree: 5.5675675675675675
+Normal-> 5-20
+[Bank 1] +74 customers | Total: 63934 | Train: 50000 | Avg default prob: 0.4690
+Avg degree: 69.83331769122478
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.83331769122478
+Normal-> 5-20
+Avg degree: 3.1272727272727274
+Normal-> 5-20
+[Bank 2] +55 customers | Total: 63930 | Train: 50000 | Avg default prob: 0.4686
+Avg degree: 69.8134975846921
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.8134975846921
+Normal-> 5-20
+Avg degree: 4.96969696969697
+Normal-> 5-20
+[Bank 3] +66 customers | Total: 63967 | Train: 50000 | Avg default prob: 0.4645
+Bank 0 loss: 1.0890
+Bank 1 loss: 1.1019
+Bank 2 loss: 1.0921
+Bank 3 loss: 1.0909
+Bank 0: Hybrid AUC=0.7084, AP=0.2519 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.6945, AP=0.2486 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7105, AP=0.2489 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7035, AP=0.2430 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7042, AP=0.2481 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -4.41%
+
+============================================================
+Round 4/30
+============================================================
+Avg degree: 69.81302133774876
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81302133774876
+Normal-> 5-20
+Avg degree: 7.802469135802469
+Normal-> 5-20
+[Bank 0] +81 customers | Total: 64018 | Train: 50000 | Avg default prob: 0.4661
+Avg degree: 69.82799362360517
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.82799362360517
+Normal-> 5-20
+Avg degree: 4.6923076923076925
+Normal-> 5-20
+[Bank 1] +52 customers | Total: 63986 | Train: 50000 | Avg default prob: 0.4696
+Avg degree: 69.83393242271747
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.83393242271747
+Normal-> 5-20
+Avg degree: 5.642857142857143
+Normal-> 5-20
+[Bank 2] +56 customers | Total: 63986 | Train: 50000 | Avg default prob: 0.4657
+Avg degree: 69.81409876003373
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81409876003373
+Normal-> 5-20
+Avg degree: 4.776119402985074
+Normal-> 5-20
+[Bank 3] +67 customers | Total: 64034 | Train: 50000 | Avg default prob: 0.4660
+Bank 0 loss: 1.0794
+Bank 1 loss: 1.0919
+Bank 2 loss: 1.0846
+Bank 3 loss: 1.0849
+Bank 0: Hybrid AUC=0.7146, AP=0.2599 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7038, AP=0.2575 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7145, AP=0.2506 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7118, AP=0.2486 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7112, AP=0.2541 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -3.71%
+
+============================================================
+Round 5/30
+============================================================
+Avg degree: 69.81365955654033
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81365955654033
+Normal-> 5-20
+Avg degree: 3.710144927536232
+Normal-> 5-20
+[Bank 0] +69 customers | Total: 64087 | Train: 50000 | Avg default prob: 0.4679
+Avg degree: 69.82855626326963
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.82855626326963
+Normal-> 5-20
+Avg degree: 6.0
+Normal-> 5-20
+[Bank 1] +70 customers | Total: 64056 | Train: 50000 | Avg default prob: 0.4673
+Avg degree: 69.8344573498189
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.8344573498189
+Normal-> 5-20
+Avg degree: 4.857142857142857
+Normal-> 5-20
+[Bank 2] +70 customers | Total: 64056 | Train: 50000 | Avg default prob: 0.4695
+Avg degree: 69.81435995068742
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81435995068742
+Normal-> 5-20
+Avg degree: 4.25531914893617
+Normal-> 5-20
+[Bank 3] +47 customers | Total: 64081 | Train: 50000 | Avg default prob: 0.4695
+Bank 0 loss: 1.0773
+Bank 1 loss: 1.0846
+Bank 2 loss: 1.0782
+Bank 3 loss: 1.0790
+Bank 0: Hybrid AUC=0.7176, AP=0.2649 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7091, AP=0.2636 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7162, AP=0.2500 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7159, AP=0.2524 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7147, AP=0.2577 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -3.36%
+
+============================================================
+Round 6/30
+============================================================
+Avg degree: 69.81413184106745
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81413184106745
+Normal-> 5-20
+Avg degree: 4.606060606060606
+Normal-> 5-20
+[Bank 0] +66 customers | Total: 64153 | Train: 50000 | Avg default prob: 0.4686
+Avg degree: 69.8285562798241
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.8285562798241
+Normal-> 5-20
+Avg degree: 5.2
+Normal-> 5-20
+[Bank 1] +70 customers | Total: 64126 | Train: 50000 | Avg default prob: 0.4675
+Avg degree: 69.8349656893325
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.8349656893325
+Normal-> 5-20
+Avg degree: 5.3125
+Normal-> 5-20
+[Bank 2] +64 customers | Total: 64120 | Train: 50000 | Avg default prob: 0.4713
+Avg degree: 69.81486505449273
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81486505449273
+Normal-> 5-20
+Avg degree: 4.428571428571429
+Normal-> 5-20
+[Bank 3] +56 customers | Total: 64137 | Train: 50000 | Avg default prob: 0.4679
+Bank 0 loss: 1.0668
+Bank 1 loss: 1.0811
+Bank 2 loss: 1.0718
+Bank 3 loss: 1.0726
+Bank 0: Hybrid AUC=0.7190, AP=0.2673 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7123, AP=0.2677 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7168, AP=0.2504 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7181, AP=0.2552 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7165, AP=0.2601 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -3.18%
+
+============================================================
+Round 7/30
+============================================================
+Avg degree: 69.81428304472405
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81428304472405
+Normal-> 5-20
+Avg degree: 4.888888888888889
+Normal-> 5-20
+[Bank 0] +63 customers | Total: 64216 | Train: 50000 | Avg default prob: 0.4676
+Avg degree: 69.828529585891
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.828529585891
+Normal-> 5-20
+Avg degree: 4.533333333333333
+Normal-> 5-20
+[Bank 1] +60 customers | Total: 64186 | Train: 50000 | Avg default prob: 0.4689
+Avg degree: 69.83555070883315
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.83555070883315
+Normal-> 5-20
+Avg degree: 5.2
+Normal-> 5-20
+[Bank 2] +70 customers | Total: 64190 | Train: 50000 | Avg default prob: 0.4741
+Avg degree: 69.81529595015576
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81529595015576
+Normal-> 5-20
+Avg degree: 5.079365079365079
+Normal-> 5-20
+[Bank 3] +63 customers | Total: 64200 | Train: 50000 | Avg default prob: 0.4705
+Bank 0 loss: 1.0649
+Bank 1 loss: 1.0767
+Bank 2 loss: 1.0662
+Bank 3 loss: 1.0688
+Bank 0: Hybrid AUC=0.7200, AP=0.2691 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7145, AP=0.2709 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7175, AP=0.2511 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7198, AP=0.2575 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7179, AP=0.2622 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -3.04%
+
+============================================================
+Round 8/30
+============================================================
+Avg degree: 69.8145163799272
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.8145163799272
+Normal-> 5-20
+Avg degree: 6.228571428571429
+Normal-> 5-20
+[Bank 0] +70 customers | Total: 64286 | Train: 50000 | Avg default prob: 0.4642
+Avg degree: 69.82890047467123
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.82890047467123
+Normal-> 5-20
+Avg degree: 5.391304347826087
+Normal-> 5-20
+[Bank 1] +69 customers | Total: 64255 | Train: 50000 | Avg default prob: 0.4745
+Avg degree: 69.83602832464399
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.83602832464399
+Normal-> 5-20
+Avg degree: 5.907692307692308
+Normal-> 5-20
+[Bank 2] +65 customers | Total: 64255 | Train: 50000 | Avg default prob: 0.4688
+Avg degree: 69.81463612027642
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81463612027642
+Normal-> 5-20
+Avg degree: 2.923076923076923
+Normal-> 5-20
+[Bank 3] +52 customers | Total: 64252 | Train: 50000 | Avg default prob: 0.4704
+Bank 0 loss: 1.0588
+Bank 1 loss: 1.0745
+Bank 2 loss: 1.0650
+Bank 3 loss: 1.0629
+Bank 0: Hybrid AUC=0.7210, AP=0.2701 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7163, AP=0.2731 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7181, AP=0.2518 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7211, AP=0.2591 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7191, AP=0.2635 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -2.92%
+
+============================================================
+Round 9/30
+============================================================
+Avg degree: 69.81420425412905
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81420425412905
+Normal-> 5-20
+Avg degree: 7.04
+Normal-> 5-20
+[Bank 0] +75 customers | Total: 64361 | Train: 50000 | Avg default prob: 0.4654
+Avg degree: 69.82819205174451
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.82819205174451
+Normal-> 5-20
+Avg degree: 6.360655737704918
+Normal-> 5-20
+[Bank 1] +61 customers | Total: 64316 | Train: 50000 | Avg default prob: 0.4774
+Avg degree: 69.83646625309017
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.83646625309017
+Normal-> 5-20
+Avg degree: 5.096774193548387
+Normal-> 5-20
+[Bank 2] +62 customers | Total: 64317 | Train: 50000 | Avg default prob: 0.4711
+Avg degree: 69.8150831907946
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.8150831907946
+Normal-> 5-20
+Avg degree: 5.0344827586206895
+Normal-> 5-20
+[Bank 3] +58 customers | Total: 64310 | Train: 50000 | Avg default prob: 0.4723
+Bank 0 loss: 1.0595
+Bank 1 loss: 1.0721
+Bank 2 loss: 1.0588
+Bank 3 loss: 1.0634
+Bank 0: Hybrid AUC=0.7220, AP=0.2711 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7179, AP=0.2750 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7189, AP=0.2527 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7223, AP=0.2602 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7203, AP=0.2647 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -2.80%
+
+============================================================
+Round 10/30
+============================================================
+Avg degree: 69.81447331656888
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81447331656888
+Normal-> 5-20
+Avg degree: 5.442622950819672
+Normal-> 5-20
+[Bank 0] +61 customers | Total: 64422 | Train: 50000 | Avg default prob: 0.4596
+Avg degree: 69.82820484940741
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.82820484940741
+Normal-> 5-20
+Avg degree: 3.9365079365079363
+Normal-> 5-20
+[Bank 1] +63 customers | Total: 64379 | Train: 50000 | Avg default prob: 0.4665
+Avg degree: 69.83690587138862
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.83690587138862
+Normal-> 5-20
+Avg degree: 6.412698412698413
+Normal-> 5-20
+[Bank 2] +63 customers | Total: 64380 | Train: 50000 | Avg default prob: 0.4706
+Avg degree: 69.81515711645102
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81515711645102
+Normal-> 5-20
+Avg degree: 5.6231884057971016
+Normal-> 5-20
+[Bank 3] +69 customers | Total: 64379 | Train: 50000 | Avg default prob: 0.4652
+Bank 0 loss: 1.0571
+Bank 1 loss: 1.0681
+Bank 2 loss: 1.0593
+Bank 3 loss: 1.0611
+Bank 0: Hybrid AUC=0.7229, AP=0.2717 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7193, AP=0.2764 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7197, AP=0.2535 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7233, AP=0.2611 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7213, AP=0.2657 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -2.70%
+
+============================================================
+Round 11/30
+============================================================
+Avg degree: 69.81498999736364
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81498999736364
+Normal-> 5-20
+Avg degree: 4.721311475409836
+Normal-> 5-20
+[Bank 0] +61 customers | Total: 64483 | Train: 50000 | Avg default prob: 0.4625
+Avg degree: 69.82870176418564
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.82870176418564
+Normal-> 5-20
+Avg degree: 6.285714285714286
+Normal-> 5-20
+[Bank 1] +70 customers | Total: 64449 | Train: 50000 | Avg default prob: 0.4656
+Avg degree: 69.83748719699557
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.83748719699557
+Normal-> 5-20
+Avg degree: 4.827586206896552
+Normal-> 5-20
+[Bank 2] +58 customers | Total: 64438 | Train: 50000 | Avg default prob: 0.4663
+Avg degree: 69.81556652080812
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81556652080812
+Normal-> 5-20
+Avg degree: 5.731343283582089
+Normal-> 5-20
+[Bank 3] +67 customers | Total: 64446 | Train: 50000 | Avg default prob: 0.4628
+Bank 0 loss: 1.0527
+Bank 1 loss: 1.0687
+Bank 2 loss: 1.0573
+Bank 3 loss: 1.0579
+Bank 0: Hybrid AUC=0.7239, AP=0.2725 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7206, AP=0.2775 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7207, AP=0.2544 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7244, AP=0.2620 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7224, AP=0.2666 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -2.59%
+
+============================================================
+Round 12/30
+============================================================
+Avg degree: 69.81404427369758
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81404427369758
+Normal-> 5-20
+Avg degree: 6.857142857142857
+Normal-> 5-20
+[Bank 0] +70 customers | Total: 64553 | Train: 50000 | Avg default prob: 0.4629
+Avg degree: 69.8282959794166
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.8282959794166
+Normal-> 5-20
+Avg degree: 4.057971014492754
+Normal-> 5-20
+[Bank 1] +69 customers | Total: 64518 | Train: 50000 | Avg default prob: 0.4645
+Avg degree: 69.83804400068217
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.83804400068217
+Normal-> 5-20
+Avg degree: 4.262295081967213
+Normal-> 5-20
+[Bank 2] +61 customers | Total: 64499 | Train: 50000 | Avg default prob: 0.4732
+Avg degree: 69.8156646305541
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.8156646305541
+Normal-> 5-20
+Avg degree: 5.0
+Normal-> 5-20
+[Bank 3] +56 customers | Total: 64502 | Train: 50000 | Avg default prob: 0.4602
+Bank 0 loss: 1.0503
+Bank 1 loss: 1.0658
+Bank 2 loss: 1.0559
+Bank 3 loss: 1.0591
+Bank 0: Hybrid AUC=0.7247, AP=0.2733 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7217, AP=0.2785 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7216, AP=0.2555 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7253, AP=0.2627 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7233, AP=0.2675 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -2.50%
+
+============================================================
+Round 13/30
+============================================================
+Avg degree: 69.81453509966572
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81453509966572
+Normal-> 5-20
+Avg degree: 5.650793650793651
+Normal-> 5-20
+[Bank 0] +63 customers | Total: 64616 | Train: 50000 | Avg default prob: 0.4646
+Avg degree: 69.82891029015576
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.82891029015576
+Normal-> 5-20
+Avg degree: 6.117647058823529
+Normal-> 5-20
+[Bank 1] +68 customers | Total: 64586 | Train: 50000 | Avg default prob: 0.4557
+Avg degree: 69.83877813405208
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.83877813405208
+Normal-> 5-20
+Avg degree: 5.241379310344827
+Normal-> 5-20
+[Bank 2] +58 customers | Total: 64557 | Train: 50000 | Avg default prob: 0.4701
+Avg degree: 69.81625857609689
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81625857609689
+Normal-> 5-20
+Avg degree: 5.074626865671642
+Normal-> 5-20
+[Bank 3] +67 customers | Total: 64569 | Train: 50000 | Avg default prob: 0.4576
+Bank 0 loss: 1.0514
+Bank 1 loss: 1.0686
+Bank 2 loss: 1.0587
+Bank 3 loss: 1.0543
+Bank 0: Hybrid AUC=0.7258, AP=0.2740 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7229, AP=0.2793 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7227, AP=0.2568 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7262, AP=0.2637 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7244, AP=0.2685 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -2.39%
+
+============================================================
+Round 14/30
+============================================================
+Avg degree: 69.81495223077637
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81495223077637
+Normal-> 5-20
+Avg degree: 7.428571428571429
+Normal-> 5-20
+[Bank 0] +70 customers | Total: 64686 | Train: 50000 | Avg default prob: 0.4638
+Avg degree: 69.82927319691275
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.82927319691275
+Normal-> 5-20
+Avg degree: 5.134328358208955
+Normal-> 5-20
+[Bank 1] +67 customers | Total: 64653 | Train: 50000 | Avg default prob: 0.4701
+Avg degree: 69.83915802507352
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.83915802507352
+Normal-> 5-20
+Avg degree: 4.679245283018868
+Normal-> 5-20
+[Bank 2] +53 customers | Total: 64610 | Train: 50000 | Avg default prob: 0.4755
+Avg degree: 69.81669374178077
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81669374178077
+Normal-> 5-20
+Avg degree: 7.03030303030303
+Normal-> 5-20
+[Bank 3] +66 customers | Total: 64635 | Train: 50000 | Avg default prob: 0.4619
+Bank 0 loss: 1.0446
+Bank 1 loss: 1.0642
+Bank 2 loss: 1.0535
+Bank 3 loss: 1.0538
+Bank 0: Hybrid AUC=0.7268, AP=0.2750 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7238, AP=0.2801 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7236, AP=0.2581 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7270, AP=0.2645 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7253, AP=0.2694 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -2.30%
+
+============================================================
+Round 15/30
+============================================================
+Avg degree: 69.8151265695708
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.8151265695708
+Normal-> 5-20
+Avg degree: 3.6065573770491803
+Normal-> 5-20
+[Bank 0] +61 customers | Total: 64747 | Train: 50000 | Avg default prob: 0.4686
+Avg degree: 69.82947293601372
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.82947293601372
+Normal-> 5-20
+Avg degree: 4.8125
+Normal-> 5-20
+[Bank 1] +64 customers | Total: 64717 | Train: 50000 | Avg default prob: 0.4629
+Avg degree: 69.83930973697639
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.83930973697639
+Normal-> 5-20
+Avg degree: 5.836065573770492
+Normal-> 5-20
+[Bank 2] +61 customers | Total: 64671 | Train: 50000 | Avg default prob: 0.4673
+Avg degree: 69.81717023413955
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81717023413955
+Normal-> 5-20
+Avg degree: 6.571428571428571
+Normal-> 5-20
+[Bank 3] +70 customers | Total: 64705 | Train: 50000 | Avg default prob: 0.4604
+Bank 0 loss: 1.0497
+Bank 1 loss: 1.0625
+Bank 2 loss: 1.0514
+Bank 3 loss: 1.0531
+Bank 0: Hybrid AUC=0.7278, AP=0.2759 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7248, AP=0.2807 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7246, AP=0.2593 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7278, AP=0.2653 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7263, AP=0.2703 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -2.21%
+
+============================================================
+Round 16/30
+============================================================
+Avg degree: 69.81550282346407
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81550282346407
+Normal-> 5-20
+Avg degree: 6.08955223880597
+Normal-> 5-20
+[Bank 0] +67 customers | Total: 64814 | Train: 50000 | Avg default prob: 0.4664
+Avg degree: 69.82988839320171
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.82988839320171
+Normal-> 5-20
+Avg degree: 7.0625
+Normal-> 5-20
+[Bank 1] +64 customers | Total: 64781 | Train: 50000 | Avg default prob: 0.4639
+Avg degree: 69.83948462049467
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.83948462049467
+Normal-> 5-20
+Avg degree: 5.862068965517241
+Normal-> 5-20
+[Bank 2] +58 customers | Total: 64729 | Train: 50000 | Avg default prob: 0.4566
+Avg degree: 69.81766812820355
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81766812820355
+Normal-> 5-20
+Avg degree: 6.507462686567164
+Normal-> 5-20
+[Bank 3] +67 customers | Total: 64772 | Train: 50000 | Avg default prob: 0.4643
+Bank 0 loss: 1.0444
+Bank 1 loss: 1.0589
+Bank 2 loss: 1.0512
+Bank 3 loss: 1.0519
+Bank 0: Hybrid AUC=0.7289, AP=0.2770 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7256, AP=0.2813 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7257, AP=0.2609 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7288, AP=0.2663 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7272, AP=0.2714 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -2.11%
+
+============================================================
+Round 17/30
+============================================================
+Avg degree: 69.81590022661754
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81590022661754
+Normal-> 5-20
+Avg degree: 4.60377358490566
+Normal-> 5-20
+[Bank 0] +53 customers | Total: 64867 | Train: 50000 | Avg default prob: 0.4496
+Avg degree: 69.83045985874224
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.83045985874224
+Normal-> 5-20
+Avg degree: 5.846153846153846
+Normal-> 5-20
+[Bank 1] +65 customers | Total: 64846 | Train: 50000 | Avg default prob: 0.4561
+Avg degree: 69.84015805152109
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.84015805152109
+Normal-> 5-20
+Avg degree: 5.0
+Normal-> 5-20
+[Bank 2] +60 customers | Total: 64789 | Train: 50000 | Avg default prob: 0.4677
+Avg degree: 69.81776407093292
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81776407093292
+Normal-> 5-20
+Avg degree: 7.487179487179487
+Normal-> 5-20
+[Bank 3] +78 customers | Total: 64850 | Train: 50000 | Avg default prob: 0.4616
+Bank 0 loss: 1.0419
+Bank 1 loss: 1.0618
+Bank 2 loss: 1.0519
+Bank 3 loss: 1.0518
+Bank 0: Hybrid AUC=0.7300, AP=0.2781 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7265, AP=0.2821 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7269, AP=0.2626 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7298, AP=0.2676 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7283, AP=0.2726 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -2.00%
+
+============================================================
+Round 18/30
+============================================================
+Avg degree: 69.81631427383464
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81631427383464
+Normal-> 5-20
+Avg degree: 6.514285714285714
+Normal-> 5-20
+[Bank 0] +70 customers | Total: 64937 | Train: 50000 | Avg default prob: 0.4710
+Avg degree: 69.83073462344386
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.83073462344386
+Normal-> 5-20
+Avg degree: 3.7241379310344827
+Normal-> 5-20
+[Bank 1] +58 customers | Total: 64904 | Train: 50000 | Avg default prob: 0.4638
+Avg degree: 69.84062172330846
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.84062172330846
+Normal-> 5-20
+Avg degree: 4.698412698412699
+Normal-> 5-20
+[Bank 2] +63 customers | Total: 64852 | Train: 50000 | Avg default prob: 0.4687
+Avg degree: 69.81785411692213
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81785411692213
+Normal-> 5-20
+Avg degree: 4.8
+Normal-> 5-20
+[Bank 3] +65 customers | Total: 64915 | Train: 50000 | Avg default prob: 0.4592
+Bank 0 loss: 1.0415
+Bank 1 loss: 1.0592
+Bank 2 loss: 1.0457
+Bank 3 loss: 1.0520
+Bank 0: Hybrid AUC=0.7311, AP=0.2791 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7274, AP=0.2826 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7281, AP=0.2642 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7309, AP=0.2689 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7294, AP=0.2737 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -1.89%
+
+============================================================
+Round 19/30
+============================================================
+Avg degree: 69.81669666343625
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81669666343625
+Normal-> 5-20
+Avg degree: 6.628571428571429
+Normal-> 5-20
+[Bank 0] +70 customers | Total: 65007 | Train: 50000 | Avg default prob: 0.4652
+Avg degree: 69.83128598257443
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.83128598257443
+Normal-> 5-20
+Avg degree: 6.206896551724138
+Normal-> 5-20
+[Bank 1] +58 customers | Total: 64962 | Train: 50000 | Avg default prob: 0.4599
+Avg degree: 69.84069869533741
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.84069869533741
+Normal-> 5-20
+Avg degree: 4.811594202898551
+Normal-> 5-20
+[Bank 2] +69 customers | Total: 64921 | Train: 50000 | Avg default prob: 0.4632
+Avg degree: 69.8182657678456
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.8182657678456
+Normal-> 5-20
+Avg degree: 4.9491525423728815
+Normal-> 5-20
+[Bank 3] +59 customers | Total: 64974 | Train: 50000 | Avg default prob: 0.4613
+Bank 0 loss: 1.0424
+Bank 1 loss: 1.0551
+Bank 2 loss: 1.0458
+Bank 3 loss: 1.0477
+Bank 0: Hybrid AUC=0.7322, AP=0.2803 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7283, AP=0.2832 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7293, AP=0.2659 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7319, AP=0.2702 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7304, AP=0.2749 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -1.79%
+
+============================================================
+Round 20/30
+============================================================
+Avg degree: 69.81716480983481
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81716480983481
+Normal-> 5-20
+Avg degree: 5.588235294117647
+Normal-> 5-20
+[Bank 0] +68 customers | Total: 65075 | Train: 50000 | Avg default prob: 0.4654
+Avg degree: 69.83167220376522
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.83167220376522
+Normal-> 5-20
+Avg degree: 4.814814814814815
+Normal-> 5-20
+[Bank 1] +54 customers | Total: 65016 | Train: 50000 | Avg default prob: 0.4631
+Avg degree: 69.84115456811398
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.84115456811398
+Normal-> 5-20
+Avg degree: 7.945205479452055
+Normal-> 5-20
+[Bank 2] +73 customers | Total: 64994 | Train: 50000 | Avg default prob: 0.4531
+Avg degree: 69.81858999000538
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81858999000538
+Normal-> 5-20
+Avg degree: 5.704918032786885
+Normal-> 5-20
+[Bank 3] +61 customers | Total: 65035 | Train: 50000 | Avg default prob: 0.4656
+Bank 0 loss: 1.0370
+Bank 1 loss: 1.0533
+Bank 2 loss: 1.0444
+Bank 3 loss: 1.0475
+Bank 0: Hybrid AUC=0.7331, AP=0.2814 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7292, AP=0.2836 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7303, AP=0.2673 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7329, AP=0.2715 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7314, AP=0.2760 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -1.69%
+
+============================================================
+Round 21/30
+============================================================
+Avg degree: 69.81773247781905
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81773247781905
+Normal-> 5-20
+Avg degree: 6.253521126760563
+Normal-> 5-20
+[Bank 0] +71 customers | Total: 65146 | Train: 50000 | Avg default prob: 0.4636
+Avg degree: 69.83214505224339
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.83214505224339
+Normal-> 5-20
+Avg degree: 6.9375
+Normal-> 5-20
+[Bank 1] +64 customers | Total: 65080 | Train: 50000 | Avg default prob: 0.4652
+Avg degree: 69.84160120520822
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.84160120520822
+Normal-> 5-20
+Avg degree: 3.3684210526315788
+Normal-> 5-20
+[Bank 2] +57 customers | Total: 65051 | Train: 50000 | Avg default prob: 0.4617
+Avg degree: 69.81922917402726
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81922917402726
+Normal-> 5-20
+Avg degree: 4.375
+Normal-> 5-20
+[Bank 3] +64 customers | Total: 65099 | Train: 50000 | Avg default prob: 0.4703
+Bank 0 loss: 1.0357
+Bank 1 loss: 1.0506
+Bank 2 loss: 1.0467
+Bank 3 loss: 1.0436
+Bank 0: Hybrid AUC=0.7341, AP=0.2825 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7302, AP=0.2842 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7313, AP=0.2690 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7339, AP=0.2728 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7324, AP=0.2771 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -1.59%
+
+============================================================
+Round 22/30
+============================================================
+Avg degree: 69.8177496281074
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.8177496281074
+Normal-> 5-20
+Avg degree: 4.459016393442623
+Normal-> 5-20
+[Bank 0] +61 customers | Total: 65207 | Train: 50000 | Avg default prob: 0.4446
+Avg degree: 69.83136339913425
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.83136339913425
+Normal-> 5-20
+Avg degree: 6.545454545454546
+Normal-> 5-20
+[Bank 1] +66 customers | Total: 65146 | Train: 50000 | Avg default prob: 0.4550
+Avg degree: 69.84193147087282
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.84193147087282
+Normal-> 5-20
+Avg degree: 5.333333333333333
+Normal-> 5-20
+[Bank 2] +60 customers | Total: 65111 | Train: 50000 | Avg default prob: 0.4721
+Avg degree: 69.819788853425
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.819788853425
+Normal-> 5-20
+Avg degree: 6.956521739130435
+Normal-> 5-20
+[Bank 3] +69 customers | Total: 65168 | Train: 50000 | Avg default prob: 0.4570
+Bank 0 loss: 1.0331
+Bank 1 loss: 1.0486
+Bank 2 loss: 1.0399
+Bank 3 loss: 1.0445
+Bank 0: Hybrid AUC=0.7350, AP=0.2837 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7311, AP=0.2845 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7324, AP=0.2707 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7348, AP=0.2742 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7334, AP=0.2783 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -1.50%
+
+============================================================
+Round 23/30
+============================================================
+Avg degree: 69.81822638214433
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81822638214433
+Normal-> 5-20
+Avg degree: 5.5
+Normal-> 5-20
+[Bank 0] +72 customers | Total: 65279 | Train: 50000 | Avg default prob: 0.4589
+Avg degree: 69.83156700050613
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.83156700050613
+Normal-> 5-20
+Avg degree: 3.709090909090909
+Normal-> 5-20
+[Bank 1] +55 customers | Total: 65201 | Train: 50000 | Avg default prob: 0.4696
+Avg degree: 69.8425187185467
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.8425187185467
+Normal-> 5-20
+Avg degree: 5.107692307692307
+Normal-> 5-20
+[Bank 2] +65 customers | Total: 65176 | Train: 50000 | Avg default prob: 0.4581
+Avg degree: 69.8199350012264
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.8199350012264
+Normal-> 5-20
+Avg degree: 5.5
+Normal-> 5-20
+[Bank 3] +64 customers | Total: 65232 | Train: 50000 | Avg default prob: 0.4780
+Bank 0 loss: 1.0282
+Bank 1 loss: 1.0497
+Bank 2 loss: 1.0403
+Bank 3 loss: 1.0396
+Bank 0: Hybrid AUC=0.7359, AP=0.2849 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7320, AP=0.2851 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7334, AP=0.2721 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7358, AP=0.2756 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7343, AP=0.2794 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -1.40%
+
+============================================================
+Round 24/30
+============================================================
+Avg degree: 69.81853518195452
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81853518195452
+Normal-> 5-20
+Avg degree: 4.537313432835821
+Normal-> 5-20
+[Bank 0] +67 customers | Total: 65346 | Train: 50000 | Avg default prob: 0.4637
+Avg degree: 69.83227862648054
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.83227862648054
+Normal-> 5-20
+Avg degree: 4.129032258064516
+Normal-> 5-20
+[Bank 1] +62 customers | Total: 65263 | Train: 50000 | Avg default prob: 0.4636
+Avg degree: 69.84231258525818
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.84231258525818
+Normal-> 5-20
+Avg degree: 5.432835820895522
+Normal-> 5-20
+[Bank 2] +67 customers | Total: 65243 | Train: 50000 | Avg default prob: 0.4678
+Avg degree: 69.81921215462845
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81921215462845
+Normal-> 5-20
+Avg degree: 4.133333333333334
+Normal-> 5-20
+[Bank 3] +60 customers | Total: 65292 | Train: 50000 | Avg default prob: 0.4584
+Bank 0 loss: 1.0329
+Bank 1 loss: 1.0485
+Bank 2 loss: 1.0385
+Bank 3 loss: 1.0378
+Bank 0: Hybrid AUC=0.7368, AP=0.2861 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7329, AP=0.2855 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7344, AP=0.2735 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7366, AP=0.2766 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7352, AP=0.2804 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -1.31%
+
+============================================================
+Round 25/30
+============================================================
+Avg degree: 69.81885442621949
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81885442621949
+Normal-> 5-20
+Avg degree: 6.535211267605634
+Normal-> 5-20
+[Bank 0] +71 customers | Total: 65417 | Train: 50000 | Avg default prob: 0.4683
+Avg degree: 69.83256540174813
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.83256540174813
+Normal-> 5-20
+Avg degree: 5.375
+Normal-> 5-20
+[Bank 1] +64 customers | Total: 65327 | Train: 50000 | Avg default prob: 0.4623
+Avg degree: 69.84267667100528
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.84267667100528
+Normal-> 5-20
+Avg degree: 5.806451612903226
+Normal-> 5-20
+[Bank 2] +62 customers | Total: 65305 | Train: 50000 | Avg default prob: 0.4693
+Avg degree: 69.81952839283255
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81952839283255
+Normal-> 5-20
+Avg degree: 5.288135593220339
+Normal-> 5-20
+[Bank 3] +59 customers | Total: 65351 | Train: 50000 | Avg default prob: 0.4501
+Bank 0 loss: 1.0332
+Bank 1 loss: 1.0485
+Bank 2 loss: 1.0394
+Bank 3 loss: 1.0390
+Bank 0: Hybrid AUC=0.7376, AP=0.2871 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7339, AP=0.2861 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7353, AP=0.2747 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7375, AP=0.2778 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7361, AP=0.2814 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -1.22%
+
+============================================================
+Round 26/30
+============================================================
+Avg degree: 69.81950616152824
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81950616152824
+Normal-> 5-20
+Avg degree: 4.8
+Normal-> 5-20
+[Bank 0] +70 customers | Total: 65487 | Train: 50000 | Avg default prob: 0.4702
+Avg degree: 69.8329714023551
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.8329714023551
+Normal-> 5-20
+Avg degree: 6.7936507936507935
+Normal-> 5-20
+[Bank 1] +63 customers | Total: 65390 | Train: 50000 | Avg default prob: 0.4566
+Avg degree: 69.84305207122316
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.84305207122316
+Normal-> 5-20
+Avg degree: 5.91044776119403
+Normal-> 5-20
+[Bank 2] +67 customers | Total: 65372 | Train: 50000 | Avg default prob: 0.4703
+Avg degree: 69.81998868622624
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.81998868622624
+Normal-> 5-20
+Avg degree: 5.642857142857143
+Normal-> 5-20
+[Bank 3] +56 customers | Total: 65407 | Train: 50000 | Avg default prob: 0.4690
+Bank 0 loss: 1.0298
+Bank 1 loss: 1.0433
+Bank 2 loss: 1.0413
+Bank 3 loss: 1.0344
+Bank 0: Hybrid AUC=0.7384, AP=0.2882 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7348, AP=0.2867 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7362, AP=0.2759 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7383, AP=0.2789 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7370, AP=0.2824 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -1.14%
+
+============================================================
+Round 27/30
+============================================================
+Avg degree: 69.81981844534289
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.81981844534289
+Normal-> 5-20
+Avg degree: 3.1724137931034484
+Normal-> 5-20
+[Bank 0] +58 customers | Total: 65545 | Train: 50000 | Avg default prob: 0.4601
+Avg degree: 69.83190735195258
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.83190735195258
+Normal-> 5-20
+Avg degree: 4.580645161290323
+Normal-> 5-20
+[Bank 1] +62 customers | Total: 65452 | Train: 50000 | Avg default prob: 0.4574
+Avg degree: 69.84343866511827
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.84343866511827
+Normal-> 5-20
+Avg degree: 6.611111111111111
+Normal-> 5-20
+[Bank 2] +72 customers | Total: 65444 | Train: 50000 | Avg default prob: 0.4703
+Avg degree: 69.82050067969024
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.82050067969024
+Normal-> 5-20
+Avg degree: 5.75
+Normal-> 5-20
+[Bank 3] +64 customers | Total: 65471 | Train: 50000 | Avg default prob: 0.4673
+Bank 0 loss: 1.0297
+Bank 1 loss: 1.0461
+Bank 2 loss: 1.0337
+Bank 3 loss: 1.0349
+Bank 0: Hybrid AUC=0.7392, AP=0.2893 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7358, AP=0.2872 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7372, AP=0.2769 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7392, AP=0.2799 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7378, AP=0.2833 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -1.05%
+
+============================================================
+Round 28/30
+============================================================
+Avg degree: 69.82004725969968
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.82004725969968
+Normal-> 5-20
+Avg degree: 3.6
+Normal-> 5-20
+[Bank 0] +50 customers | Total: 65595 | Train: 50000 | Avg default prob: 0.4719
+Avg degree: 69.83240479279554
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.83240479279554
+Normal-> 5-20
+Avg degree: 4.761904761904762
+Normal-> 5-20
+[Bank 1] +63 customers | Total: 65515 | Train: 50000 | Avg default prob: 0.4648
+Avg degree: 69.84414355279428
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.84414355279428
+Normal-> 5-20
+Avg degree: 4.3076923076923075
+Normal-> 5-20
+[Bank 2] +65 customers | Total: 65509 | Train: 50000 | Avg default prob: 0.4704
+Avg degree: 69.82181268974355
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.82181268974355
+Normal-> 5-20
+Avg degree: 6.82051282051282
+Normal-> 5-20
+[Bank 3] +78 customers | Total: 65549 | Train: 50000 | Avg default prob: 0.4582
+Bank 0 loss: 1.0273
+Bank 1 loss: 1.0397
+Bank 2 loss: 1.0298
+Bank 3 loss: 1.0314
+Bank 0: Hybrid AUC=0.7400, AP=0.2903 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7367, AP=0.2878 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7380, AP=0.2778 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7400, AP=0.2808 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7387, AP=0.2842 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -0.96%
+
+============================================================
+Round 29/30
+============================================================
+Avg degree: 69.82033046524023
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.82033046524023
+Normal-> 5-20
+Avg degree: 6.914285714285715
+Normal-> 5-20
+[Bank 0] +70 customers | Total: 65665 | Train: 50000 | Avg default prob: 0.4713
+Avg degree: 69.83142966069386
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.83142966069386
+Normal-> 5-20
+Avg degree: 4.0
+Normal-> 5-20
+[Bank 1] +60 customers | Total: 65575 | Train: 50000 | Avg default prob: 0.4580
+Avg degree: 69.84465930580126
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.84465930580126
+Normal-> 5-20
+Avg degree: 5.396825396825397
+Normal-> 5-20
+[Bank 2] +63 customers | Total: 65572 | Train: 50000 | Avg default prob: 0.4670
+Avg degree: 69.82228860574286
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.82228860574286
+Normal-> 5-20
+Avg degree: 7.238095238095238
+Normal-> 5-20
+[Bank 3] +63 customers | Total: 65612 | Train: 50000 | Avg default prob: 0.4587
+Bank 0 loss: 1.0259
+Bank 1 loss: 1.0383
+Bank 2 loss: 1.0349
+Bank 3 loss: 1.0332
+Bank 0: Hybrid AUC=0.7408, AP=0.2911 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7376, AP=0.2884 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7388, AP=0.2785 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7408, AP=0.2816 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7395, AP=0.2849 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -0.88%
+
+============================================================
+Round 30/30
+============================================================
+Avg degree: 69.82041685683858
+Normal-> 5-20
+[Bank 0] Train set capped at 50000
+Avg degree: 69.82041685683858
+Normal-> 5-20
+Avg degree: 5.292307692307692
+Normal-> 5-20
+[Bank 0] +65 customers | Total: 65730 | Train: 50000 | Avg default prob: 0.4762
+Avg degree: 69.83202059751062
+Normal-> 5-20
+[Bank 1] Train set capped at 50000
+Avg degree: 69.83202059751062
+Normal-> 5-20
+Avg degree: 5.8125
+Normal-> 5-20
+[Bank 1] +64 customers | Total: 65639 | Train: 50000 | Avg default prob: 0.4649
+Avg degree: 69.84513887830816
+Normal-> 5-20
+[Bank 2] Train set capped at 50000
+Avg degree: 69.84513887830816
+Normal-> 5-20
+Avg degree: 5.836065573770492
+Normal-> 5-20
+[Bank 2] +61 customers | Total: 65633 | Train: 50000 | Avg default prob: 0.4658
+Avg degree: 69.82274125277871
+Normal-> 5-20
+[Bank 3] Train set capped at 50000
+Avg degree: 69.82274125277871
+Normal-> 5-20
+Avg degree: 5.696969696969697
+Normal-> 5-20
+[Bank 3] +66 customers | Total: 65678 | Train: 50000 | Avg default prob: 0.4711
+Bank 0 loss: 1.0248
+Bank 1 loss: 1.0425
+Bank 2 loss: 1.0311
+Bank 3 loss: 1.0258
+Bank 0: Hybrid AUC=0.7415, AP=0.2918 | XGB-only AUC=0.7463
+Bank 1: Hybrid AUC=0.7384, AP=0.2888 | XGB-only AUC=0.7488
+Bank 2: Hybrid AUC=0.7395, AP=0.2792 | XGB-only AUC=0.7502
+Bank 3: Hybrid AUC=0.7415, AP=0.2823 | XGB-only AUC=0.7479
+
+Global: Hybrid AUC=0.7402, AP=0.2855 | XGB-only AUC=0.7483
+Hybrid improvement over XGB: -0.81%
+
+============================================================
+FEDERATION COMPLETE
+============================================================
+
+Final Global Metrics:
+  Hybrid (XGB+SAGE) AUC: 0.7402
+  Hybrid (XGB+SAGE) AP:  0.2855
+  XGBoost-only AUC:      0.7483
+  Improvement:           -0.81%
+
+Per-Bank Final Results:
+  Bank 0: Hybrid AUC=0.7415, AP=0.2918 | XGB AUC=0.7463 | Δ=-0.0048
+  Bank 1: Hybrid AUC=0.7384, AP=0.2888 | XGB AUC=0.7488 | Δ=-0.0105
+  Bank 2: Hybrid AUC=0.7395, AP=0.2792 | XGB AUC=0.7502 | Δ=-0.0107
+  Bank 3: Hybrid AUC=0.7415, AP=0.2823 | XGB AUC=0.7479 | Δ=-0.0064
+
+Results saved to ./hybrid_results/
+Done.

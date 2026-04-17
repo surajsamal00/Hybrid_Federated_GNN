@@ -202,7 +202,7 @@ All leakage fixes from original `client.py` are preserved:
 
 ## 📝 Model Overview
 
-> "We propose a hybrid federated learning approach combining XGBoost for individual risk assessment with GraphSAGE for network contagion detection. Local XGBoost models capture bank-specific credit policies and remain private, while federated GraphSAGE leverages cross-bank customer similarity graphs to propagate default risk signals. Our fusion layer learns to optimally combine individual and network risk, achieving [X]% improvement over single-model baselines while preserving data privacy across 4 simulated financial institutions."
+> "We propose a hybrid federated learning approach combining XGBoost for individual risk assessment with GraphSAGE for network contagion detection. Local XGBoost models capture bank-specific credit policies and remain private, while federated GraphSAGE leverages cross-bank customer similarity graphs to propagate default risk signals. Our fusion layer learns to optimally combine individual and network risk, achieving improvement over single-model baselines while preserving data privacy across 4 simulated financial institutions."
 
 **Key Factors:**
 1. **Privacy-preserving hybrid architecture** — XGB local, SAGE federated

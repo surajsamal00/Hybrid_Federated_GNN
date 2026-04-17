@@ -161,7 +161,7 @@ python hybrid_simulate.py --csv data.csv --num_banks 4 --rounds 40
 
 Compare final AUCs:
 - If Hybrid > XGB and Hybrid > SAGE → **Strong result**
-- Typical gap: Hybrid should be 2-5% better than best single model
+- Typical gap: Hybrid should be 1-3% better than best single model
 
 ## 🔬 Technical Details
 
